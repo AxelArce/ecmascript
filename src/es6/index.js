@@ -60,3 +60,36 @@ const a = 'b';
 a = 'a';
 console.log(a);
 
+const square = num => num * num
+
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+       if(true) {
+           resolve('Hey!')
+       } else {
+           reject('Ups!!')
+       }
+    });
+}
+helloPromise()
+  .then(response => console.log(response))
+  .catch(error => console.log(error));
+
+  class calculator {
+      constructor() {
+          this.valueA = 0;
+          this.valueB = 0;
+      }
+      sum(valueA, valueB) {
+          this.valueA = valueA;
+          thisvalueB = valueB;
+          return this.valueA + this.valueB;
+        }
+  }
+
+  const calc = new calculator();
+  console.log(calc.sum(2,2));
+
+  import { hello } from './module.js';
+
+  hello();
